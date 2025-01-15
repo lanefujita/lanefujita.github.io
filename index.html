@@ -14,11 +14,29 @@
   }
   h2{
     font-weight: normal;
+    white-space: nowrap;
   }
   #cursor {
     color: #888;
+    font-size: .9em;
+    font-weight: 100;
     /*text-decoration: underline;*/
   }
+  @keyframes appearColor{
+    from{
+      color:transparent;
+      top: 4px;
+    }to{
+      color: white;
+      top: 0;
+    }
+  }
+  .character{
+    display: inline-block;
+    animation: appearColor 0.5s ease-out; 
+    position: relative;
+  }
+
 </style>
 <script src="script.js" defer></script>
 </head>

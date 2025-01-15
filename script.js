@@ -41,8 +41,11 @@ async function clearMarquee(){
 async function populateMarquee(word){
   for(const character of word){
     if(!running) return  
+    const span = document.createElement("span")
+    span.className="character"
+    span.textContent=character
+    marqueeOutput.appendChild(span)
     marqueeText += character
-    marqueeOutput.textContent = marqueeText
     let delayTime = Math.random()*750
     await delay(delayTime)
   }
@@ -58,7 +61,7 @@ async function startMarquee(){
     for(let i = 0; i < wordArr.length-1; i++){
       //0. Clear marquee
       await clearMarquee()
-      //1. Pick a random word
+      //1. Iterate on next word
       const currentWord = wordArr[i] + "..." 
       //2. Write to marquee 
       await populateMarquee(currentWord)
