@@ -55,11 +55,27 @@
     animation: appearColor 1.5s ease-out; 
     position: relative;
   }
-
+  @keyframes budge{
+    0%{
+      left: 0;
+    }
+    50%{
+      left: -.075em;
+    }
+    100%{
+      left: 0;
+    }
+  }
+  .budge{
+    animation: budge .15s;
+  }
+  #prefix{
+    position: relative;
+  }
 </style>
 <script src="script.js" defer></script>
 </head>
 <body>
-  <h2 id="dynamicMarquee">Lane is <span id="marqueeOutput"></span><span id="cursor"></span></h2>
+  <h2 id="dynamicMarquee"><span id="prefix">Lane is </span><span id="marqueeOutput"></span><span id="cursor"></span></h2>
 </body>  
 </html>

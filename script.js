@@ -4,6 +4,7 @@ let running = true
 let marqueeText = ""
 
 const cursorElement = document.getElementById("cursor")
+const prefixElement = document.getElementById("prefix")
 const marqueeOutput = document.getElementById("marqueeOutput")
 
 function updateCursor(s){
@@ -34,7 +35,9 @@ async function clearMarquee(){
     marqueeOutput.textContent = marqueeText
     await delay(22)
   }
+  prefixElement.classList.toggle("budge");
   await delay(1000)
+  prefixElement.classList.toggle("budge");
   console.log("Cleared")
 }
 
@@ -59,18 +62,19 @@ function pickRandomFromArr(arr){
 async function startMarquee(){
   while(running){
     for(let i = 0; i < wordArr.length-1; i++){
-      //0. Clear marquee
-      await clearMarquee()
-      cursorElement.classList.toggle("active");
-      await delay(500)
       //1. Iterate on next word
       const currentWord = wordArr[i] + "..." 
       //2. Write to marquee 
+      cursorElement.classList.toggle("active");
+      await delay(400)
       await populateMarquee(currentWord)
       await delay(200)
-      cursorElement.classList.toggle("active");
       //3. Wait, then loop
+      cursorElement.classList.toggle("active");
       await delay(2000)
+      //4. Clear marquee
+      await clearMarquee()
+      await delay(500)
     }
   }
 }
