@@ -6,7 +6,7 @@
 <style>
   body{
     background: #000;
-    color: #fff;
+    color: #acacac;
     font-family: sans-serif;
     font-size: .5em;
     padding: 1em 1em;
@@ -25,15 +25,20 @@
   @keyframes appearColor{
     from{
       color:transparent;
-      top: 4px;
-    }to{
+      top: 3px;
+    }
+    60%{
       color: white;
+      top: -1px;
+    }
+    to{
+      color: #acacac;
       top: 0;
     }
   }
   .character{
     display: inline-block;
-    animation: appearColor 0.5s ease-out; 
+    animation: appearColor 0.75s ease-out; 
     position: relative;
   }
 
