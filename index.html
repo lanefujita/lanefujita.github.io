@@ -17,22 +17,9 @@
     height: 1em;
     white-space: nowrap;
   }
-  /*
-  @keyframes cursorFlash{
-    0%{
-      background: transparent;
-    }
-    50%{
-      background: transparent;
-    }
-    70%{
-      background: #acacac;
-    }
-    100%{
-      background: #acacac;
-    }
+  .active {
+    color: #dddddd !important;
   }
-  */
   #cursor {
     /*animation: cursorFlash .75s ease infinite alternate;*/
     border-radius: .25em;
@@ -43,6 +30,7 @@
     height: 1em;
     margin-left: .125em;
     position: relative;
+    transition: color 1.25s ease-out;
     top: -1px;
     width: .75em;
   }

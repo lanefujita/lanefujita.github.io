@@ -61,10 +61,14 @@ async function startMarquee(){
     for(let i = 0; i < wordArr.length-1; i++){
       //0. Clear marquee
       await clearMarquee()
+      cursorElement.classList.toggle("active");
+      await delay(500)
       //1. Iterate on next word
       const currentWord = wordArr[i] + "..." 
       //2. Write to marquee 
       await populateMarquee(currentWord)
+      await delay(200)
+      cursorElement.classList.toggle("active");
       //3. Wait, then loop
       await delay(2000)
     }
