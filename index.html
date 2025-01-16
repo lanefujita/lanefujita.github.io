@@ -16,29 +16,53 @@
     font-weight: normal;
     white-space: nowrap;
   }
+  /*
+  @keyframes cursorFlash{
+    0%{
+      background: transparent;
+    }
+    50%{
+      background: transparent;
+    }
+    70%{
+      background: #acacac;
+    }
+    100%{
+      background: #acacac;
+    }
+  }
+  */
   #cursor {
+    /*animation: cursorFlash .75s ease infinite alternate;*/
+    border-radius: .25em;
     color: #888;
+    display: inline-block;
     font-size: .9em;
     font-weight: 100;
+    height: 1em;
+    margin-left: .25em;
     /*text-decoration: underline;*/
+    width: .75em;
   }
   @keyframes appearColor{
-    from{
+    0%{
       color:transparent;
       top: 3px;
     }
-    60%{
+    30%{
       color: white;
       top: -1px;
     }
-    to{
+    40%{
+      top: 0px;
+    }
+    100%{
       color: #acacac;
-      top: 0;
     }
   }
   .character{
     display: inline-block;
-    animation: appearColor 0.75s ease-out; 
+    animation: appearColor 1.5s ease-out; 
     position: relative;
   }
 
