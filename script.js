@@ -30,14 +30,15 @@ function delay(ms) {
 }
 
 async function clearMarquee(){
-  while (marqueeText.length >0 && running){
-    marqueeText=marqueeText.slice(0,-1)
-    marqueeOutput.textContent = marqueeText
-    await delay(22)
-  }
-  prefixElement.classList.toggle("budge");
-  await delay(1000)
-  prefixElement.classList.toggle("budge");
+    marqueeOutput.textContent = ""
+//  while (marqueeText.length >0 && running){
+//    marqueeText=marqueeText.slice(0,-1)
+//    marqueeOutput.textContent = marqueeText
+//    await delay(22)
+//  }
+  //prefixElement.classList.toggle("budge");
+  //await delay(1000)
+  //prefixElement.classList.toggle("budge");
   console.log("Cleared")
 }
 
@@ -71,7 +72,7 @@ async function startMarquee(){
       await delay(200)
       //3. Wait, then loop
       cursorElement.classList.toggle("active");
-      await delay(2000)
+      await delay(6000)
       //4. Clear marquee
       await clearMarquee()
       await delay(500)
