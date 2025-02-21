@@ -32,22 +32,21 @@
   }
   @keyframes appearColor{
     0%{
-      filter: blur(5px);
+      filter: blur(8px);
       opacity: 0;
-      transform: translateY(0.1em) scale(0.8);
+      transform: translateY(0.1em) scale(0.7);
     }
     10%{
       filter: blur(0);
-      transform: translateY(-0.1em) scale(1);
+      transform: translateY(0em) scale(1);
       opacity: 1;
     }
     20%{
       transform: translateY(0);
       opacity: 0.7;
+      filter: blur(0);
     }
     65%{
-      opacity: 0.7;
-      filter: blur(0);
       transform: scale(1);
     }
     100%{
@@ -84,6 +83,6 @@
 <script src="script.js" defer></script>
 </head>
 <body>
-  <h2 id="dynamicMarquee"><span id="prefix">Lane is </span><span id="marqueeOutput"></span><span id="cursor"></span></h2>
+  <h2 id="dynamicMarquee"><span id="prefix">Lane is </span><br/><span id="marqueeOutput"></span><span id="cursor"></span></h2>
 </body>  
 </html>
