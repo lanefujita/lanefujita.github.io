@@ -79,10 +79,34 @@
   #prefix{
     position: relative;
   }
+  .nav-footer{
+    list-style-type: none;
+    position: absolute;
+    bottom: 50px;
+  }
+  .nav-footer-item{
+    background-image: url("i/instagram.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display:inline-block;
+    opacity: 0.6;
+    transition: opacity 0.75s;
+    width: 25px;
+    height: 25px;
+  }
+  .nav-img-text{
+    opacity: 0;
+  }
+  .nav-footer-item:hover{
+    opacity: 1;
+  }
 </style>
 <script src="script.js" defer></script>
 </head>
 <body>
   <h2 id="dynamicMarquee"><span id="prefix">Lane is </span><br/><span id="marqueeOutput"></span><span id="cursor"></span></h2>
+  <ul class="nav-footer">
+    <li><a class="nav-footer-item nav-ig" href="http://instagram.com/lanefujita"><span class="nav-img-text">>Instagram</span></a></li>
+  </ul>
 </body>  
 </html>
