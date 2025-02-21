@@ -50,7 +50,7 @@ async function populateMarquee(word){
     span.textContent=character
     marqueeOutput.appendChild(span)
     marqueeText += character
-    let delayTime = Math.random()*750
+    let delayTime = Math.random()*750+100
     await delay(delayTime)
   }
 }
